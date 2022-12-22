@@ -9,21 +9,22 @@
 namespace fs = std::filesystem;
 
 void romChoice(std::string filePath);
+void createRomFolder();
 Chip8 game;
 
-// This is the rom to load.
 
 
-// Folder Create folder that'll have the roms
-std::string path = R"(C:\Users\bmini\Desktop\Winter Break Emu Project\CH8 FIles)";
 
+std::filesystem::path cwd = std::filesystem::current_path();
+std::filesystem::path dir_path = cwd / "CH8 Roms";
 
 int main()
 {
 
-    //game.loadRom(file);
-    romChoice(path);
-    system("pause>9");
+
+    createRomFolder();
+    
+    system("pause>0");
 }
 
 void romChoice(std::string filePath) { // Allows user to select a rom to load.
@@ -46,4 +47,16 @@ void romChoice(std::string filePath) { // Allows user to select a rom to load.
 
         
 
+}
+
+void createRomFolder() {
+    if (std::filesystem::exists(dir_path)) {
+        std::cout << "Rom folder found!\n";
+        romChoice(dir_path.string());
+
+    }
+    else {
+        std::cout << "Rom folder not found, thus one was created!\nPlease Save your roms there, and restart";
+        std::filesystem::create_directory(dir_path.string());
+    }
 }
