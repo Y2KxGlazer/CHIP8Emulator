@@ -1,7 +1,10 @@
 #pragma once
+#include <iostream>
 #include <cstdint>
 #include <fstream>
 
+void romChoice(std::string filePath);
+void createRomFolder();
 
 struct Chip8 {
     uint8_t registers[16] = { 0 };          // The registers

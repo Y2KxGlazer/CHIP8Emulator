@@ -18,12 +18,15 @@
     <ClCompile Include="CHIP8Emulator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CHIP8Def.cpp">
+    <ClCompile Include="Chip8Rom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="chip8.h">
+    <ClInclude Include="chip8_emulator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chip8_rom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
