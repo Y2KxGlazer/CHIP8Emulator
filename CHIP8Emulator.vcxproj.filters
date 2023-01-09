@@ -29,5 +29,8 @@
     <ClInclude Include="chip8_rom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="OPCODES.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

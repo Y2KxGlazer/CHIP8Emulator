@@ -40,7 +40,7 @@ void createRomFolder() {
             std::filesystem::create_directory(dir_path.string());
         }
     }
-    catch (const std::filesystem::filesystem_error& e) {
-        std::cerr << "Error creating directory: " << e.what() << std::endl;
+    catch (const std::filesystem::filesystem_error& error) {
+        std::cerr << "Error creating directory: " << error.what() << std::endl;
     }
 }
